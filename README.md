@@ -38,7 +38,7 @@ hdiutil attach ~/Downloads/Win10_VERSION_LANG_ARCH.iso -mountpoint /Volumes/WINI
 rsync -v -r -I --no-links --no-perms --no-owner --no-group --exclude sources/install.wim /Volumes/WINISO/ /Volumes/WININST/
 
 # Split-copy install.wim
-wimlib-imagex split /Volumes/WINISO/sources/install.wim /Volumes/WININST/sources/install.swm 1024
+wimsplit /Volumes/WINISO/sources/install.wim /Volumes/WININST/sources/install.swm 1024
 
 # Ensure all data is written and detach all devices
 sync
